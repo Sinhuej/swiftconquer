@@ -1,6 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
-void main() => runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  
+  await SystemChrome.setPreferredOrientations([
+    DeviceOrientation.landscapeLeft,
+    DeviceOrientation.landscapeRight,
+  ]);
+  
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -9,13 +19,20 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'SwiftConquer',
-      theme: ThemeData.dark(),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.dark().copyWith(
+        primaryColor: Colors.red,
+      ),
       home: const Scaffold(
         body: Center(
           child: Text(
-            'SWIFTCONQUER\nLoading...',
+            'SWIFTCONQUER\nComing Soon!',
             textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 32),
+            style: TextStyle(
+              fontSize: 40,
+              fontWeight: FontWeight.bold,
+              color: Colors.red,
+            ),
           ),
         ),
       ),

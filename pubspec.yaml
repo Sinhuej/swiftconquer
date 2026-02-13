@@ -1,6 +1,7 @@
 name: swiftconquer
-description: RTS game with spy mechanics
+description: Fast-paced RTS game
 version: 1.0.0+1
+publish_to: 'none'
 
 environment:
   sdk: '>=3.0.0 <4.0.0'

@@ -2,4 +2,5 @@ package com.swiftconquer.game
 
 import io.flutter.embedding.android.FlutterActivity
 
-class MainActivity: FlutterActivity()
+class MainActivity: FlutterActivity() {
+}
