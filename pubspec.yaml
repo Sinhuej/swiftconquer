@@ -1,5 +1,5 @@
 name: swiftconquer
-description: Fast-paced RTS game
+description: RTS game with spy mechanics
 version: 1.0.0+1
 publish_to: 'none'
 
@@ -9,6 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  provider: ^6.1.1
 
 flutter:
   uses-material-design: true
